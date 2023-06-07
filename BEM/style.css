@@ -1,0 +1,50 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+body > div {
+    margin: auto;
+}
+/* block */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    padding: 12px 38px;
+    border-radius: 50px;
+    cursor: pointer;
+    min-width: 120px;
+    transition: opacity 0.2s ease;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+/* khoang cach giua 2 button canh nhau */
+.btn + .btn {
+    margin-left: 20px;
+}
+.btn--success {
+    background-color: #71be34;
+}
+.btn--warn {
+    background-color: #ffb702;
+}
+.btn--danger {
+    background-color: #ff623d;
+}
+
+.btn--disabled {
+    opacity: 0.5 !important;
+    cursor: default;
+}
+.btn--size--s {
+    padding: 8px 30px;
+}
+.btn--size--l {
+    padding: 16px 56px;
+}
+

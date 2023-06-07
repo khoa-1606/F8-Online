@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - VD1</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+        /* Wrap layout */
+        .wrap-layout {
+            background-color: #333;
+            margin-top: 36px;
+            padding: 12px 0 32px 0;
+            display: flex;
+            justify-content: space-around; /*can giua cac item*/
+            flex-wrap: wrap; /*khi thu nho man hinh - tu dong xuong dong*/
+        }
+        .wrap-layout_item {
+            width: 148px;
+            height: 90px;
+            color: #fff;
+            text-align: center;
+            line-height: 90px;
+            font-size: 48px;
+            font-weight: 700;
+            margin-top: 20px;
+            background-color: lightsalmon;
+        }
+
+        /* Chart layout */
+        .chart-layout {
+            margin: 36px auto 0 auto;
+            padding: 32px 0;
+            height: 320px;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-around;
+            /*align-items: flex-end; cho cot flex-item hien thi bat dau tu duoi len*/
+        }
+        .chart-layout_item {
+            width: 60px;
+            color: #fff;
+            text-align: center;
+            height: var(--percent); /*tao bien dua vao so % trong style*/
+            background-color: rgb(149, 5, 5);
+            align-self: flex-end; /*cho cot flex-item hien thi bat dau tu duoi len*/
+            animation: growth ease-in 0.5s;
+        }
+
+        /* The end */
+        .the-end {
+            margin: 12px auto 48px auto;
+            padding: 32px 0;
+            max-width: 740px;
+            min-height: 360px;
+            display: flex;
+            /* flex-direction: row-reverse; => dao nguoc row */
+        }
+        .the-end_first {
+            padding: 4px 16px;
+            background-color: #ccc;
+            flex: 1;
+        }
+        .the-end_second {
+            flex: 1;
+            display: flex;
+            flex-direction: column; /*sap xep cho 2 the div trong .the-end_second nam theo 1 cot*/
+        }
+        .the-end_second-one {
+            flex: 1;
+            padding: 4px 16px;
+            background-color: lightseagreen;
+        }
+        .the-end_second-two {
+            flex: 1;
+            padding: 4px 16px;
+            background-color: lightpink;
+        }
+
+        /* Feature */
+        .feature-layout {
+            margin: 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around; 
+        }
+        /* PC - Tablet */
+        @media (min-width: 740px) {
+            .feature-layout {
+                flex-direction: row;
+            }
+        }
+        .feature-item {
+            padding: 12px 16px;
+            margin: 16px 15px 0 10px;
+            flex-basis: 30%;
+        }
+        .feature-item:nth-child(1) {
+            background-color: lightpink;
+        }
+        .feature-item:nth-child(2) {
+            background-color: lightgrey;
+        }
+        .feature-item:nth-child(3) {
+            background-color: lightsalmon;
+        }
+
+        /* Animation loading theo ti le % cua cot */
+        @keyframes growth {
+            from {
+                opacity: 0;
+                height: calc(var(--percent) - 50%);
+            }
+            to {
+                opacity: 1;
+                height: var(--percent);
+            }
+        }
+
+        /* Column layout */
+        .column-layout {
+            margin-top: 36px;
+            padding: 12px 0;
+            background-color: #fff;
+            display: flex;
+        }
+        .column-item {
+            padding: 0 16px;
+        }
+        .sidebar-one {
+            flex: 1;
+            order: 1;
+        }
+        .sidebar-two {
+            flex: 1;
+            order: 2;
+        }
+        .main-column {
+            flex: 3;
+            order: 3;
+        }
+        /* order => cac the div duoc sap xep theo thu tu cua order */
+        img {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>The flex model</h1>
+    <img src="../Flexbox/Flexbox.png">
+    <!-- Column layout -->
+    <div class="column-layout">
+        <div class="column-item sidebar-one">
+            <h3>Sidebar one</h3>
+            <p>Collect stars:
+                Read all the lessons in a tutorial, and get a star.
+                Score 100% on the quiz in a tutorial, and get a star.
+                Complete all the exercises in a tutorial, and get another star.
+            </p>
+        </div>
+        <div class="column-item main-column">
+            <h3>Main column</h3>
+            <p>Welcome to the new "My learning" here at W3schools. 
+                This will be your hub to all the tutorials we offer and your learning progress.
+                <br>Collect stars: <br>
+                Read all the lessons in a tutorial, and get a star.
+                Score 100% on the quiz in a tutorial, and get a star.
+                Complete all the exercises in a tutorial, and get another star.
+            </p>
+        </div>
+        <div class="column-item sidebar-two">
+            <h3>Sidebar two</h3>
+            <p>Collect stars:
+                Read all the lessons in a tutorial, and get a star.
+                Score 100% on the quiz in a tutorial, and get a star.
+                Complete all the exercises in a tutorial, and get another star.
+            </p>
+        </div>
+    </div>
+
+    <h1>Wrap layout</h1>
+    <div class="wrap-layout">
+        <div class="wrap-layout_item">1</div>
+        <div class="wrap-layout_item">2</div>
+        <div class="wrap-layout_item">3</div>
+        <div class="wrap-layout_item">4</div>
+        <div class="wrap-layout_item">5</div>
+    </div>
+
+    <!-- Bieu do cot -->
+    <h1>Chart layout</h1>
+    <div class="chart-layout">
+        <div class="chart-layout_item" style="--percent: 10%">10%</div>
+        <div class="chart-layout_item" style="--percent: 40%">40%</div>
+        <div class="chart-layout_item" style="--percent: 100%">100%</div>
+        <div class="chart-layout_item" style="--percent: 60%">60%</div>
+        <div class="chart-layout_item" style="--percent: 20%">20%</div>
+        <div class="chart-layout_item" style="--percent: 85%">85%</div>
+        <div class="chart-layout_item" style="--percent: 20%">20%</div>
+        <div class="chart-layout_item" style="--percent: 17%">17%</div>
+        <div class="chart-layout_item" style="--percent: 96%">96%</div>
+        <div class="chart-layout_item" style="--percent: 47%">47%</div>
+        <!-- align-items & align-self => sd 1 trong 2 -->
+    </div>
+
+    <!-- End -->
+    <h1>End</h1>
+    <div class="the-end">
+        <div class="the-end_first">
+            <p>My learning</p>
+            <p>Hi, Khoa</p>
+            <p>Welcome to the new "My learning" here at W3schools. This will be your hub to all the tutorials we offer and your learning progress.</p>
+        </div>
+        <div class="the-end_second">
+            <div class="the-end_second-one">
+                <p>We hope you will continue to learn with us.</p>
+            </div>
+            <div class="the-end_second-two">
+                <p>Continue HTML / CSS</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature -->
+    <div class="feature-layout">
+        <div class="feature-item">
+            <h3>Feature 1</h3>
+            <p>Collect stars:
+                Read all the lessons in a tutorial, and get a star.
+                Score 100% on the quiz in a tutorial, and get a star.
+                Complete all the exercises in a tutorial, and get another star.
+            </p>
+        </div>
+        <div class="feature-item">
+            <h3>Feature 2</h3>
+            <p>Collect stars:
+                Read all the lessons in a tutorial, and get a star.
+                Score 100% on the quiz in a tutorial, and get a star.
+                Complete all the exercises in a tutorial, and get another star.
+            </p>
+        </div>
+        <div class="feature-item">
+            <h3>Feature 3</h3>
+            <p>Collect stars:
+                Read all the lessons in a tutorial, and get a star.
+                Score 100% on the quiz in a tutorial, and get a star.
+                Complete all the exercises in a tutorial, and get another star.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

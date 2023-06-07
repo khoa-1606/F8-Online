@@ -1,0 +1,191 @@
+QUY TẮC CHUNG ĐỂ VIẾT CODE "SẠCH"
+- Suy nghĩ đơn giản và viết code đơn giản nhất có thể
+- Luôn dọn code sạch hơn lúc ta nhận nó lần đầu, dù là của mình hay của người khác
+- Luôn tìm ra nguyên nhân gốc rễ của vấn đề
+
+QUY TẮC ĐẶT TÊN
+- Đặt tên không mơ hồ, mô tả đúng chức năng của định danh
+- Không dùng từ viết tắt
+- Tên class và tên biến thường dùng danh từ
+- Tên hàm thường dùng động từ
+- Không nên sử dụng magic number (dùng số trực tiếp trong code) mà nên đặt tên riêng cho hằng số
+
+QUY TẮC VỀ SỐ LƯỢNG
+- Một dòng code không nên dài quá 80 ký tự
+- Một câu lệnh nên lồng tối đa 4 cấp
+- Một hàm không nên chứa quá 5 tham số
+- Một hàm không nên quá 30 dòng
+- Một class không nên quá 500 dòng
+- Mỗi hàm chỉ nên làm duy nhất 1 việc, nếu thực hiện hai mục đích khác nhau thì tên hàm cần thể hiện rõ
+
+QUY TẮC XUỐNG HÀNG
+- Nếu hàm có nhiều cấp lồng nhau, mỗi cấp nên xuống dòng
+- Các đoạn code bằng cấp nên ở cùng 1 cột với nhau, dòng xuống hàng nên bắt đầu cùng cấp với dòng phía trên
+- Xuống hàng trước các toán tử (VD: +, -, *, ?,...)
+
+QUY TẮC COMMENT
+- Hạn chế dufmg comment để giải thích code hoặc chú thích những sự kiện những sự thật hiển nhiên
+- Không comment khi đóng thẻ/ngoặc
+- Xóa code không dùng, đừng comment out đoạn code đó
+- Comment cảnh báo hậu quả
+- Comment làm rõ ý nghĩa cỉa code (nếu logic phức tạp)
+
+-------------------------------------------------------------------------------------------------------------------=====================================================================
+Install NGROK => tạo địa chỉ https để các thiết bị khác truy cập vào web
+____________________________________________________________
+1. Download ngrok => giản nén file
+2. Chọn file đã được giải nén => chuột phải => chọn Git Bash Here
+3. Làm theo các bước trên trang chủ và lấy mã giác thực (khi login thì trang chủ sẽ hiển thị mã xác thực)
+	./ngrok authtoken 2QVflTEeIngiMJG8NMKhDp7OT0n_7u3AREmdtTKQCcHpQfEE8
+4. Git Bash Here => nhập ./ngrok authtoken [mã xác thực]
+. Git sẽ hiển thị thông tin truy cập của web:
+	- web interface		https://127.0.0.1:4040
+=> Trong đó: [4040] là cổng của server web mặc định của ngrok
+. Git Bash Here => nhập ./ngrok http 5500 => Trong đó: [5500] là cổng của server web => xem cổng theo live server trên VScode
+Git sẽ hiển thị:
+	forwarding		https://651b-27-3-138-5.ngrok-free.app	https://localhost:5500
+Trong đó:
+				Đây là địa chỉ truy cập trên các thiết bị khác
+=====================================================================
+-------------------------------------------------------------------------------------------------------------------
+|------------------- CSS Flexbox ------------------------|
+display: flex | inline-flex => sử dụng thuộc tính
+
+flex-direction:: row | colunm => thay đổi phương hướng của axis (phần cha - flex-container)
+
+flex-wrap: nowrap | wrap | wrap-reverse => xuống dòng
+
+flex-basic: <length> => xét kích thước main size cho flex-item
+
+justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly
+=> căn chỉnh flex-item (css flex-container áp dụng cho flex-item)
+
+justify-self: flex-start | flex-end | center => thuộc tính cho flex-item
+_____________________________________________________________________
+align-content: flex-start | flex-end | center
+=> căn chỉnh flex-item (css flex-container áp dụng cho flex-item)
+
+    flex-start: Các dòng được dồn về phía trên cùng của hộp chứa.
+    flex-end: Các dòng được dồn về phía dưới cùng của hộp chứa.
+    center: Các dòng được dồn về trung tâm của hộp chứa.
+    space-between: Các dòng được trình bày với khoảng cách bằng nhau giữa chúng.
+    space-around: Các dòng sẽ được trình bày với khoảng cách bằng nhau xung quanh chúng.
+    stretch: Các dòng sẽ được kéo dài để phù hợp với hộp chứa.
+_____________________________________________________________________
+"align-items" là một thuộc tính trong CSS được sử dụng để căn chỉnh các phần tử con của một container theo hướng dọc (theo trục chính).
+
+Các giá trị của "align-items" bao gồm:
+
+- flex-start: Các phần tử con được căn chỉnh lên trên cùng của container (theo trục chính).
+- flex-end: Các phần tử con được căn chỉnh xuống dưới cùng của container (theo trục chính).
+- center: Các phần tử con được căn chỉnh vào giữa của container (theo trục chính).
+- stretch: Các phần tử con được căn chỉnh để đạt độ cao của container (theo trục chính).
+- baseline: Các phần tử con được căn chỉnh theo đường baseline của chúng.
+_____________________________________________________________________
+align-self: flex-start | flex-end | center => thuộc tính cho flex-item
+
+flex-grow: <number> => lớn lên
+
+flex-shrink: <number> => thu nhỏ lại
+
+flex: <number> => viết gộp nhiều thuộc tính
+Trong đó: flex-grow & flex-shrik & flex-basic
+E.x:
+flex: 1; =>  flex-grow: 1; 	 flex-shrik: 1; 	 flex-basic: 1;
+
+flex-flow: <number> => viết gộp nhiều thuộc tính
+Trong đó: flex-direction & flex-wrap
+E.x:
+flex-flow: row wrap; => flex-direction:row;	flex-wrap:wrap;
+
+order: <number> => xác định thứ tự của các flex-item
+_____________________________________________________________________
+Trang web tham khảo: https://codepen.io/enxaneta/full/adLPwv/
+_____________________________________________________________________
+*** https://codepen.io/enxaneta/full/adLPwv/ ***
+Nếu muốn rèn luyện thêm và nắm chắc hơn về flexbox thì các bạn có thể tham khảo 3 games sau:
+1. https://codingfantasy.com/games/flexboxadventure/play
+2. https://flexboxfroggy.com/
+3. http://www.flexboxdefense.com/
+_____________________________________________________________________
+Use the justify-content property on the tower group container to move your towers into effective positions. justify-content positions a container's items along the main axis and accepts the following values:
+
+    flex-start: group items at the start of a container's main axis
+    flex-end: group items at the end of the main axis
+    center: group items in the center of the main axis
+    space-between: evenly distribute items along the main axis such that the first item aligns at the start and the final item aligns at the end
+    space-around: evenly distribute items along the main axis such that all items have equal space around them
+
+Try justify-content: center; for example, to move the container's towers to the center of the main axis.
+
+=====================================================================
+-------------------------------------------------------------------------------------------------------------------
+|------------------------------- BEM --------------------------------|
+1. BEM là gì?
+=> Block Element Modifier
+Trong đó:
+	Block : khối
+	Element : thành phần trong khối
+	Modifier : bổ sung ý nghĩa cho 'Block' hoặc 'Element'
+- Là tiêu chuẩn đặt tên class khi viết CSS
+
+2. Tại sao phải dùng BEM:
+- Mỗi người một kiể
+- Members dặt class trùng nhau, CSS đè lên nhau
+
+3. Cú pháp
+-	.block
+-	.block_element
+
+-	.block--modifier
+-	.block_element--modifier
+
+4. Tính ứng dụng
+- Xây dựng layout website
+- Xây dựng thành phần trên website
+
+5. Ưu điểm
+- Tính rõ ràng
+- Tái sử dụng dễ dàng
+- Giúp cả team làm việc với nhau dễ dàng
+- Tính module, không lo CSS của class này ảnh hưởng đến CSS của class khác
+
+6. Nhược điểm
+- Tên class dài
+- Một số người cho là xấu
+
+7. Khi nào dùng BEM thì phù hợp
+- Dự án nhiều members
+- Dự án lớn, số lượng pages nhiều hoặc số lượng thành phần trên giao diện nhiều
+
+8. Thực hành
+- Làm button
+	Enabled: Pointer, hover, effect
+	Disnable: arrow, no effect
+- Làm message
+- Làm 1 thành phần trên website
+
+9. Trường hợp Block lồng Block
+- Block con là thành phần dùng chung
+- Block con chứa nhiều element
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

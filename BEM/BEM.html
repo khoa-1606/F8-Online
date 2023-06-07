@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - BEM</title>
+
+    <style>
+        .card {
+
+        }
+
+        .card--success .card__btn {
+            /* Mau xanh */
+            color: white;
+            background-color: green;
+        }
+
+        .card--error .card__btn {
+            /* Mau do */
+            color: white;
+            background-color: red;
+        }
+
+        .card--error .card__btn--large {
+
+        }
+
+        .card__heading {
+
+        }
+
+        .card__desc {
+
+        }
+
+        .card__btn {
+
+        }
+    </style>
+</head>
+<body>
+    <!-- BEM -->
+    <div class="card card--success">
+        <h3 class="card__heading">Saved!</h3>
+        <p class="card__desc">Looks like you got a great idea.</p>
+        <div class="card__btn">OK, cool</div>
+    </div>
+
+    <div class="card card--error">
+        <h3 class="card__heading">Saved!</h3>
+        <p class="card__desc">Looks like you got a great idea.</p>
+        <div class="card__btn card__btn--large">OK, cool</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* Đối với @media nên sửa dụng em, vh, vw => không nên sử dụng px */
+/* PC */
+/*  */
+/* @media (min-width: 1024px) */
+@media (min-width: 64em) {
+}
+
+/* Tablet & Mobile */
+/* @media (max-width: 1023) */
+@media (max-width: 63.9375em) {
+    #nav .subnav a {
+        padding: 5px 12px;
+    }
+    .btn {
+        padding: 15px 16px;
+    }
+    .contact-form .form-control {
+        padding: 15px;
+        font-size: 16px;
+    }
+    .contact-info {
+        line-height: 2;
+    }
+    .contact-submit-btn {
+        font-size: 17px;
+    }
+
+}
+/* Tablet */
+/* @media (min-width: 740px) and (max-width: 1023px) */
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+    #footer .socials-list {
+        font-size: 40px;
+    }
+    #footer .socials-list a {
+        margin: 0 8px;
+    }
+    #footer .copyright a {
+        display: inline-block;
+        padding: 12px 0;
+    }
+}
+
+/* Mobile */
+/* @media (max-width: 739px) */
+@media (max-width: 46.1875em) {
+    .s-mt-8 {
+        margin-top: 8px !important;
+    }
+    .s-full-width,
+    .s-col-full {
+        width: 100% !important;
+    }
+    /* chuyen nav > li hien thi hang ngang thanh hang doc */
+    #nav {
+        display: block;
+    }
+    #nav > li {
+        display: block;
+    }
+    #nav li a {
+        padding: 1px 24px;
+    }
+    /* Css cho thẻ li đầu tiên */
+    #nav > li:first-child {
+        display: inline-block;
+    }
+    #nav .subnav {
+        /* cho nó về g.trị mặc định */
+        position: initial;
+        background-color: #333;
+    }
+    #nav .subnav a {
+        color: #fff;
+        padding: 5px 41px;
+    }
+    #header {
+        overflow: hidden;
+    }
+    /* Css mobile menu button tren khung mobile */
+    #header .mobile-menu-btn {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #header .search-btn {
+        display: none;
+    }
+    #content .member-img {
+        width: 60%;
+        margin-top: 10px;
+    }
+    .contact-form {
+        margin-top: 32px;
+    }
+    #footer .socials-list {
+        font-size: 24px;
+    }
+    #footer .socials-list a {
+        margin: 0 8px;
+    }
+    #footer .copyright a {
+        display: inline-block;
+        padding: 12px 0;
+    }
+}
