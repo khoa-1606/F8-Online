@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            min-height: 100vh;
+            background-image: 
+                linear-gradient(
+                    to top, #f064A3, #A97CDF
+                );
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .zoom {
+            width: max-content;
+            position: relative;
+        }
+        .zoom img {
+            width: 500px;
+        }
+        #imgZoom {
+            position: absolute;
+            left: 0;
+            transform: scale(1.5);
+            pointer-events: none;
+            --zoom-x: 50%;
+            --zoom-y: 50%;
+            clip-path: circle(
+                100px at var(--zoom-x) var(--zoom-y)
+            );
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="zoom">
+        <img src="../img/keyboard/Keychron-K3-ultra-switch-brown_1800x1800.jpg">
+        <img src="../img/keyboard/Keychron-K3-ultra-switch-brown_1800x1800.jpg" id="imgZoom">
+    </div>
+
+    <script>
+        let zoom = document.querySelector('.zoom');
+        let imgZoom = document.getElementById('imgZoom');
+        zoom.addEventListener('mousemove', (event)=>{
+            imgZoom.style.opacity = 1;
+            let positionPx = event.x - zoom.getBoundingClientRect().left;
+            let positionX = (positionPx / zoom.offsetWidth) * 100;
+
+            let positionPy = event.y - zoom.getBoundingClientRect().top;
+            let positionY = (positionPy / zoom.offsetHeight) * 100;
+
+            imgZoom.style.setProperty('--zoom-x', positionX + '%');
+            imgZoom.style.setProperty('--zoom-y', positionY + '%');
+
+            let transformX = -(positionX - 50) / 3.5;
+            let transformY = -(positionY - 50) / 3.5;
+
+        })
+        zoom.addEventListener('mouseout', (event)=>{
+            imgZoom.style.opacity = 0;
+        })
+    </script>
+</body>
+</html>
