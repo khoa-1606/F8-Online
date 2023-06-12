@@ -1,5 +1,5 @@
 .header {
-    height: 120px;
+    height: var(--header-height);
     background-image: linear-gradient(0, #ef6433, #f53e2d);
 }
 .header__navbar {
@@ -9,7 +9,7 @@
 .header__navbar-list {
     list-style: none;
     padding-left: 0;
-    margin-top: 4px;
+    margin: 4px 0 0 0;
 }
 .header__navbar-icon-link {
     color: var(--white-color);
@@ -24,6 +24,11 @@
     position: relative;
     min-height: 26px;
 }
+/* hover => display QR code */
+.header__navbar-item--has-qr:hover .header__qr {
+    display: block;
+}
+
 .header__navbar-item,
 .header__navbar-item-link {
     display: inline-block;
@@ -64,6 +69,339 @@
     cursor: text;
     color: var(--white-color);
 }
+/* Header QR code */
+.header__qr {
+    width: 200px;
+    background-color: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 120%;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    animation: fadeIn ease-in 0.7s;
+}
+/* Tao lop gia */
+.header__qr::before {
+    position: absolute;
+    left: 0;
+    top: -17px;
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+}
+.header__qr-img {
+    width: 100%;
+}
+.header__qr-apps {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    /* justify-content: space-evenly; */
+}
+/* Css ggplay */
+.header__qr-link:nth-child(1) {
+    margin-left: 11px;
+}
+/* Css app store */
+.header__qr-link:nth-child(2) {
+    margin-right: 11px;
+}
+.heder__qr-download-img {
+    height: 16px;
+}
+/* ---------------------------------------------------- */
+/* header notification */
+.header__notify {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    width: 404px;
+    border: 1px solid #d3d3d3;
+    background-color: var(--white-color);
+    cursor: default;
+    /* doi trong tam phong to animation */
+    transform-origin: calc(100% - 20px) top;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    /* Toi uu hoa animation tren cac trinh duyet */
+    -webkit-animation: headerNotifyGrowth ease-in 0.2s;
+    -ms-animation: headerNotifyGrowth ease-in 0.2s;
+    -o-animation: headerNotifyGrowth ease-in 0.2s;
+    -moz-animation: headerNotifyGrowth ease-in 0.2s;
+    display: none;
+    /*Toi uu hoa chuyen dong*/
+    will-change: opacity, transform;
+}
+.header__notify::before {
+    content: "";
+    border-width: 20px 27px;
+    border-style: solid;
+    border-color: transparent transparent var(--white-color) transparent;
+    position: absolute;
+    right: 4px;
+    top: -30px;
+}
+.header__notify::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 90px;
+    height: 15px;
+    right: 0;
+    top: -16px;
+    /* background-color: red; */
+}
+/* Amination thong bao */
+@keyframes headerNotifyGrowth {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+.header__navbar-item--has-notify:hover .header__notify {
+    display: block;
+}
+.header__notify-header {
+    height: 40px;
+    background-color: var(--white-color);
+}
+.header__notify-header h3 {
+    color: #bbb;
+    margin: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 40px;
+    /* cursor: text; */
+    /* user can't copy text */
+    user-select: none;
+    /* cho cac trinh duyet khac nhau
+    -webkit-user-select: none;  */
+}
+
+.header__notify-list {
+    padding-left: 0;
+}
+
+.header__notify-item {
+    display: flex;
+}
+.header__notify-item--viewed {
+    background-color: rgba(238, 75, 43, 0.08);
+}
+.header__notify-item:hover {
+    background-color: #e5f7f9;
+}
+.header__notify-link {
+    display: flex;
+    width: 100%;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.header__notify-img {
+    width: 60px;
+    object-fit: contain;
+}
+
+.header__notify-info {
+    margin-left: 18px;
+}
+
+.header__notify-name {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.8rem;
+}
+
+.header__notify-description {
+    display: block;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    color: #535050;
+    margin-top: 4px;
+}
+.header__noti-footer {
+    display: flex;
+}
+.header__noti-footer-btn {
+    width: 100%;
+    text-decoration: none;
+    color: var(--text-color);
+    padding: 8px 32px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+/* Auth modal */
+.auth-form {
+    width: 500px;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    overflow: hidden;
+}
+.auth-form__container {
+    padding: 0 32px;
+}
+.auth-form__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px;
+    margin-top: 10px;
+}
+.auth-form__heading {
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+}
+.auth-form__switch-btn {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.auth-form__input {
+    width: 100%;
+    height: 40px;
+    margin-top: 16px;
+    padding: 0 12px;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    outline: none;
+}
+/* edit lai mau focus cua input */
+.auth-form__input:focus {
+    border-color: #777;
+}
+.auth-form__aside {
+    margin-top: 20px;
+}
+.auth-form__policy-text {
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.8rem;
+    padding: 0 12px;
+}
+.auth-form__text-link {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+.auth-form__controls {
+    margin-top: 80px;
+}
+.auth-form__controls {
+    display: flex;
+    justify-content: flex-end;
+}
+.auth-form__controls-back {
+    margin-right: 8px;
+}
+.auth-form__socials {
+    background-color: #d1d1d1;
+    margin-top: 20px;
+    padding: 14px 36px;
+    display: flex;
+    justify-content: space-between;
+}
+.auth-form__socials-icon {
+    font-size: 2rem;
+}
+.auth-form__socials--facebook {
+    color: var(--white-color);
+    background-color: #3A5A98;
+}
+.auth-form__socials--facebook
+.auth-form__socials-icon {
+    color: var(--white-color);
+}
+.auth-form__socials-title {
+    margin: 0 24px;
+}
+.auth-form__socials--google {
+    background-color: var(--white-color);
+    color: var(--text-color);
+}
+.auth-form__socials--google .auth-form__socials-icon {
+    color: transparent;
+    background: conic-gradient(
+        red 0deg,
+        red 45deg,
+        blue 45deg,
+        blue 135deg,
+        green 135deg,
+        green 225deg,
+        yellow 225deg,
+        yellow 275deg,
+        red 275deg
+    );
+    border-radius: 50%;
+    background-clip: text;;
+    -webkit-background-clip: text;
+}
+.auth-form__help {
+    display: flex;
+    justify-content: flex-end;
+    line-height: 20px;
+}
+.auth-form__help-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #939393;
+}
+/* CSS duong gach */
+.auth-form__help-separate {
+    display: block;
+    height: 20px;
+    margin: 0 16px 8px;
+    border-left:  1px solid var(--border-color);
+}
+.auth-form__help-forgot {
+    color: var(--primary-color);
+}
+/* Header width search */
+.header-width-search {
+    height: var(--header-width-search-height);
+    display: flex;
+    align-items: center;
+}
+.header__logo {
+    width: 200px;
+}
+.header__logo-img {
+    width: 150px;
+}
+.header__search {
+    flex: 1;
+    height: 40px;
+    background-color: var(--white-color);
+    border-radius: 2px;
+}
+.header__cart {
+    width: 150px;
+    text-align: center;
+}
+.header__cart-icon {
+    color: var(--white-color);
+    font-size: 2.4rem;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
