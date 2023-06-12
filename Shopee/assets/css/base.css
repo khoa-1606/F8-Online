@@ -5,6 +5,7 @@
     --black-color: #000;
     --text-color: #333;
     --border-color: #dbdbdb;
+    --hover-color: #f87a61;
 
     --header-height: 120px;
     --navbar-height: 34px;
@@ -80,7 +81,7 @@ html {
 }
 /* Button style */
 .btn {
-    min-width: 142px;
+    min-width: 124px;
     height: 34px;
     text-decoration: none;
     border: none;
