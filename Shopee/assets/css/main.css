@@ -939,26 +939,131 @@
     color: var(--primary-color);
 }
 /* ----------------- HOME + filter------------ */
+.home-filter {
+    display: flex;
+    align-items: center;
+    padding: 12px 22px;
+    border-radius: 2px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.home-filter__lable {
+    color: #555;
+    font-size: 1.4rem;
+    margin-right: 16px;
+}
+.home-filter__btn {
+    margin-right: 12px;
+    min-width: 90px;
+}
+.home-filter__page {
+    display: flex;
+    align-items: center;
+/* Day elament sang ben phai */
+    margin-left: auto;
+}
+.home-filter__page-num {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-right: 22px;
+}
+.home-filter__page-curent {
+    color: var(--primary-color);
+}
+.home-filter__page-control {
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    width: 72px;
+    height: 36px;
+}
+.home-filter__page-btn {
+    flex: 1;
+    display: flex;
+    background-color: var(--white-color);
+    text-decoration: none;
+}
+.home-filter__page-btn:first-child {
+    border-right: 1px solid #eee;
+}
+.home-filter__page-icon {
+    margin: auto;
+    font-size: 1.4rem;
+    color: #666;
+}
+.home-filter__page-btn--disable {
+    cursor: default;
+    background-color: #f9f9f9;
+}
+.home-filter__page-btn--disable .home-filter__page-icon {
+    color: #ccc;
+}
+.home-filter__btn,
+.select-input,
+.home-filter__page-control {
+    box-shadow: 0 1px 1px #ccc;
+}
+/* ---------------- Product item ------------------ */
+.home-product-item {
+    margin-top: 10px;
+    background-color: var(--white-color);
+}
+.home-product-item__img {
+    /* padding-top: 100%; */
+    padding-top: 0;
+    width: 100%;
+    height: 191.67px;
+    background-repeat: no-repeat;
+/* tu dong can chinh img bang voi element cha */
+    background-size: cover;
+    background-position: center;
+}
+.home-product-item__name {
+    margin: 10px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--text-color);
+    line-height: 1.8rem;
+/* Gioi han 2 dong hien thi ten sp */
+    height: 3.6rem;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+/* Đâm thẳng dòng chữ thành 1 hàng
+    text-overflow: ellipsis;
+    white-space: nowrap; */
+}
+.home-product-item__price {
 
+}
+.home-product-item__pricr-old {
 
+}
+.home-product-item__price-current {
 
+}
+.home-product-item__rating {
 
+}
+.home-product-item__origin {
 
+}
+.home-product-item__brand {
 
+}
+.home-product-item__origin-name {
 
+}
+.home-product-item__favourite {
 
+}
+.home-product-item__sale-off-percent {
 
+}
+.home-product-item__lable-sale-off-lable {
 
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
