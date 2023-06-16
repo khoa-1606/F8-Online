@@ -163,6 +163,8 @@
     border-radius: 5px;
     display: none;
     animation: fadeIn ease-in 0.7s;
+    z-index: 1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 /* Tao lop gia */
 .header__qr::before {
@@ -599,6 +601,7 @@
     display: none;
     animation: fadeIn ease-in 0.3s;
     cursor: default;
+    z-index: 1;
 }
 .header__cart-heading {
     text-align: left;
@@ -610,6 +613,12 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
+/* độ cao theo tỉ lệ màn hình */
+    height: 50vh; /*view port height*/
+/* Khi số lượng sp vượt quá độ cao của thẻ cha
+=> auto hiển thị thanh roll 
+=> overflow-y -> theo trục dọc y */
+    overflow-y: auto;
 }
 .header__cart-item{
     display: flex;
@@ -627,21 +636,35 @@
 .header__cart-item-info{
     width: 100%;
     margin-right: 12px;
+    text-align: center;
 }
 .header__cart-item-head{
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
 }
-.header__cart-item-name{
+.header__cart-item-name {
     font-size: 1.4rem;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--text-color);
     margin: 0;
-}
-.header__cart-item-price-wrap {
-
+    text-align: justify;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 170px;
+    /* font-weight: 500;
+    line-height: 2rem;
+    max-height: 4rem;
+    overflow: hidden;
+    color: var(--text-color);
+    margin: 0;
+    flex: 1;
+    padding-right: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    text-align: left; */
 }
 .header__cart-item-price{
     font-size: 1.4rem;
@@ -787,6 +810,7 @@
     border-radius: 3px;
     display: none;
     animation: fadeIn ease-in 0.2s;
+    z-index: 1;
 }
 .header__search-option::after {
     content: "";
@@ -846,6 +870,7 @@
     box-shadow: 0 1px 5px #bababa;
     overflow: hidden;
     display: none;
+    z-index: 1;
 }
 .header__search-history-heading {
     color: #bababa;
@@ -887,49 +912,54 @@
 .category {
     border-radius: 2px;
     background-color: var(--white-color);
-
-}
-.category__heading-icon {
-    font-size: 1.4rem;
-    margin-right: 4px;
-    position: relative;
-    top: -1px;
 }
 .category__heading {
     color: var(--text-color);
-    font-size: 1.6rem;
-    padding: 12px 16px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 18px 20px 0;
     margin-top: 0;
-    border-bottom: 1px solid #e0e0e0;
+    text-transform: uppercase;
 }
 .category-list {
     padding: 0 0 8px 0;
     list-style: none;
-    margin-left: 9px;
 }
 .category-item {
-
+    position: relative;
+}
+.category-item::before {
+    content: "";
+    border-top: 1px solid #e1e1e1;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+}
+/* Bỏ border item đầu tiên */
+.category-item:first-child::before {
+    display: none;
 }
 .category-item--active .category-item__link {
     color: var(--primary-color);
 }
-.category-item--active .category-item__link::before {
+/* .category-item--active .category-item__link::before {
     content: "";
     left: 8px;
     position: absolute;
     border: 4px solid;
-/* can chinh active o giua theo trc doc */
+can chinh active o giua theo truc doc
     top: 50%;
     transform: translateY(calc(-50% - 1px));
     border-color:  transparent transparent transparent var(--primary-color);
-}
+} */
 .category-item__link {
     color: var(--text-color);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-decoration: none;
-    padding: 4px 16px;
+    padding: 10px 20px;
     display: block;
-    /* tao chuyen dong khi hover */
+    /*tao chuyen dong khi hover*/
     position: relative;
     transition: right linear 0.1s;
     right: 0;
@@ -1003,22 +1033,40 @@
     box-shadow: 0 1px 1px #ccc;
 }
 /* ---------------- Product item ------------------ */
+.home-product {
+    margin-bottom: 10px;
+}
 .home-product-item {
+    display: block;
+    position: relative;
     margin-top: 10px;
+    text-decoration: none;
     background-color: var(--white-color);
+    border-radius: 2px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+/* amianation */
+    transition: transform linear 0.1s;
+    will-change: transform;
+}
+.home-product-item:hover {
+    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.2);
+/* amianation */
+    transform: translateY(-2px);
 }
 .home-product-item__img {
     /* padding-top: 100%; */
     padding-top: 0;
     width: 100%;
     height: 191.67px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
     background-repeat: no-repeat;
 /* tu dong can chinh img bang voi element cha */
     background-size: cover;
-    background-position: center;
+    background-position: top center;
 }
 .home-product-item__name {
-    margin: 10px;
+    margin: 10px 10px 5px 10px;
     font-size: 1.4rem;
     font-weight: 400;
     color: var(--text-color);
@@ -1035,35 +1083,145 @@
     white-space: nowrap; */
 }
 .home-product-item__price {
-
+    display: flex;
+/* 2 the div chua price-old & price-current nam tren 1 hang*/
+    align-items: baseline;
+    flex-wrap: wrap;
 }
-.home-product-item__pricr-old {
-
+.home-product-item__price-old {
+    font-size: 1.4rem;
+    color: #666;
+    margin-left: 10px;
+    text-decoration: line-through; /*gach bo gia*/
 }
 .home-product-item__price-current {
-
+    font-size: 1.5rem;
+    margin-left: 10px;
+    color: var(--primary-color);
+}
+.home-product-item__action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 10px 0;
+}
+.home-product-item__like {
+    font-size: 1.3rem;
+}
+i.home-product-item__like-icon-fill {
+    color: red;
+    display: none;
+}
+.home-product-item__like--liked .home-product-item__like-icon-fill {
+    display: inline-block;
+}
+.home-product-item__like--liked .home-product-item__like-icon-empty {
+    display: none;
 }
 .home-product-item__rating {
-
+    color: #999;
+    margin: -1px 0 0 auto;
+    font-size: 1rem;
+    zoom: 0.8;
+    /* transform: calc(0.5); */
+    transform-origin: right;
+}
+.home-product-item__star--gold {
+    color: var(--star-gold-color);
+}
+.home-product-item__sold {
+    margin-left: 4px;
+    font-size: 1.2rem;
+    color: var(--text-color);
 }
 .home-product-item__origin {
-
-}
-.home-product-item__brand {
-
-}
-.home-product-item__origin-name {
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3px 10px 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: #595959;
+    padding-bottom: 10px;
 }
 .home-product-item__favourite {
-
+    position: absolute;
+    top: 10px;
+    left: -4px;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-right: 4px;
+    line-height: 1.6rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: var(--primary-color);
+    background-color: currentColor;
+}
+.home-product-item__favourite i {
+    font-size: 1rem;
+    margin: 0 3px 0 5px;
+    color: var(--white-color);
+}
+.home-product-item__favourite span {
+    color: var(--white-color);
+}
+/* Tạo lớp giả -> nếp gấp ở phần Yêu thích */
+.home-product-item__favourite::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2.9px;
+/* currentColor -> lấy màu tự động theo thẻ cha */
+    border-top: 3px solid currentColor;
+    border-left: 3px solid transparent;
+/* Giảm độ sáng của màu */
+    filter: brightness(60%);
+}
+.home-product-item__sale-off {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 36px;
+    text-align: center;
+    border-top-right-radius: 2px;
+    background-color: rgb(255, 216, 64, 0.96);
+}
+.home-product-item__sale-off::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    border-width: 0 20px 5px;
+    border-style: solid;
+    color: rgb(255, 216, 64, 0.96);
+    border-color: transparent currentColor transparent currentColor;
 }
 .home-product-item__sale-off-percent {
-
+    color: red;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 600;
+    position: relative;
+    top: 2px;
 }
 .home-product-item__lable-sale-off-lable {
-
+    position: relative;
+    top: 2px;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+    color: var(--white-color);
 }
+/* --------------- Pagination ----------------- */
+.home-product__pagination {
+    margin: 50px 0 32px 0;
+}
+
+
+
+
+
 
 
 
