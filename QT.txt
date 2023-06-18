@@ -30,7 +30,7 @@ QUY TẮC COMMENT
 - Comment cảnh báo hậu quả
 - Comment làm rõ ý nghĩa cỉa code (nếu logic phức tạp)
 
--------------------------------------------------------------------------------------------------------------------=====================================================================
+---------------------------------------------------------------------------------------------------------===============================================================
 Install NGROK => tạo địa chỉ https để các thiết bị khác truy cập vào web
 ____________________________________________________________
 1. Download ngrok => giản nén file
@@ -46,8 +46,8 @@ Git sẽ hiển thị:
 	forwarding		https://651b-27-3-138-5.ngrok-free.app	https://localhost:5500
 Trong đó:
 				Đây là địa chỉ truy cập trên các thiết bị khác
-=====================================================================
--------------------------------------------------------------------------------------------------------------------
+===============================================================
+---------------------------------------------------------------------------------------------------------
 |------------------- CSS Flexbox ------------------------|
 display: flex | inline-flex => sử dụng thuộc tính
 
@@ -61,16 +61,16 @@ justify-content: flex-start | flex-end | center | space-between | space-around |
 => căn chỉnh flex-item (css flex-container áp dụng cho flex-item)
 
 justify-self: flex-start | flex-end | center => thuộc tính cho flex-item
-_____________________________________________________________________
+_______________________________________________________________
 align-content: flex-start | flex-end | center
 => căn chỉnh flex-item (css flex-container áp dụng cho flex-item)
 
-    flex-start: Các dòng được dồn về phía trên cùng của hộp chứa.
-    flex-end: Các dòng được dồn về phía dưới cùng của hộp chứa.
-    center: Các dòng được dồn về trung tâm của hộp chứa.
-    space-between: Các dòng được trình bày với khoảng cách bằng nhau giữa chúng.
-    space-around: Các dòng sẽ được trình bày với khoảng cách bằng nhau xung quanh chúng.
-    stretch: Các dòng sẽ được kéo dài để phù hợp với hộp chứa.
+flex-start: Các dòng được dồn về phía trên cùng của hộp chứa.
+flex-end: Các dòng được dồn về phía dưới cùng của hộp chứa.
+ center: Các dòng được dồn về trung tâm của hộp chứa.
+ space-between: Các dòng được trình bày với khoảng cách bằng nhau giữa chúng.
+ space-around: Các dòng sẽ được trình bày với khoảng cách bằng nhau xung quanh chúng.
+ stretch: Các dòng sẽ được kéo dài để phù hợp với hộp chứa.
 _____________________________________________________________________
 "align-items" là một thuộc tính trong CSS được sử dụng để căn chỉnh các phần tử con của một container theo hướng dọc (theo trục chính).
 
@@ -168,6 +168,183 @@ Trong đó:
 9. Trường hợp Block lồng Block
 - Block con là thành phần dùng chung
 - Block con chứa nhiều element
+
+---------------------------------- F8 --------------------------------
+Khóa học cần hoàn thành trên F8:
+	1. HTML, CSS từ Zero đến Hero
+	2. Responsive Với Grid System
+	3. Lập Trình JavaScript Cơ Bản
+	4. Lập Trình JavaScript Nâng Cao
+	5. Xây Dựng Website với ReactJS
+
+Những việc phải làm tiếp theo là gì?
+1. Viết CV xin việc tại: https://cv.fullstack.edu.vn/, CV được điền sẵn nội dung theo chuẩn xin việc IT, bạn chỉ cần điền thêm thông tin cá nhân và cập nhật lại nội dung cho phù hợp, nên lựa mẫu CV bố cục 1 cột, ít màu mè để NTD dễ đọc hơn. Tham khảo thêm: https://fb.com/sondnf8/posts/2195606467243484
+2. Ôn tập lại các kiến thức quan trọng, tìm kiếm các bài viết chia sẻ về câu hỏi PV thường gặp, kỹ năng mềm khi phỏng vấn, ...
+3. Tìm các tin tuyển dụng, đọc mô tả công việc (JD), tìm hiểu về công ty
+4. Ứng tuyển vào công ty (gửi mail cho công ty hoặc inbox với HR trên MXH)
+5. Khi có lịch PV, lên nhắc nhở - hẹn giờ và có mặt đúng giờ
+6. Khi PV, hãy thoải mái, tự tin, thể hiện tinh thần cầu tiến và cố gắng hoàn thành tốt phần trả lời câu hỏi chuyên môn nhé
+
+------------------------------------Responsive Với Grid System-----------------------
+Responsive là gì?
+	   => là kỹ thuật giúp website hiển thị tương thích với nhiều kích cỡ màn hình khác nhau (mobile, tablet, PC,...)
+- Tối ưu trãi nghiệm người dùng:
+   1. hiển thị rõ ràng các thành phần (hình ảnh, cỡ chữ, nút bấm,..)
+   2. Ẩn / hiện các thành phần phù hợp theo kích thước màn hình
+
+Chúng ta sẽ làm gì?
+1. Dùng CSS thay đổi kích thước phù hợp cho các thành phần hiển thị trên website (hình ảnh, cỡ chữ, nút bấm,...)
+2. Dùng CS để ẩn / hiện các thành phần phù hợp theo kích thước màn hình
+	E.x: ẩn 1 đối tượng => display: none;
+Sử dụng - cài đặt công cụ:
+F12 và tùy chọn trên dev tool kích thước tỉ lệ màn hình
+- Extension trên Chrome: Viewport Resizer – Responsive Testing Tool
+
+Khái niệm Viewport:
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+màn hình hiển thị trên thiết bị của User
+content="_______________"
+	"width" --- định nghĩa chiều ngang của viewport
+	"initial-scale" --- định nghĩa độ zoom khi truy cập website
+	"minimum-scale" --- độ thu nhỏ tối thiểu của website
+	"maximuun-scale" --- độ phóng to tối đa của website
+	"height" --- chiều cao của khung hình
+	"user-scalable" --- chặn việc người dùng zoom to / nhỏ
+***Nguyên tắc bất ngờ nhỏ nhất trong lập trình phần mềm***
+
+-------------------- Media query -------------------
+@media "not|only" mediatype "and" (mediafeature "and|or|not" mediafeature) 
+{
+ 	CSS code
+}
+1. Keywords:
+-not	-only	-and	-or
+
+2.Mediatype
+-print	-screen	-speech	-all	-default
+
+3. Mediafeatre
+-min-width	-max-width	-...
+
+4.Polyfill
+
+E.x:
+<h1>Hello!</h1>
+@media "only" "screen" and "(max-width: 1024px)" {
+	h1 {
+		color: red;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
