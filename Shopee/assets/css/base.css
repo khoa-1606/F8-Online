@@ -200,9 +200,6 @@ html {
 .pagination-item {
     margin: 0 10px;
 }
-.pagination-item:hover {
-
-}
 .pagination-item--active .pagination-item__link {
     color: var(--white-color);
     background-color: var(--primary-color);
