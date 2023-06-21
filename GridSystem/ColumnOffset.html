@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Offset</title>
+
+    <link rel="stylesheet" href="Grid.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            background-color: rgb(211, 174, 174);
+            min-height: 100vh;
+        }
+        .my-column {
+            text-align: center;
+            min-height: 50vh;
+            background-color: orange;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid wide container">
+        <div class="row">
+            <div class="col l-3 m-3 l-o-6 m-o-3">
+                <div class="my-column">
+                    <h1>Column 1</h1>
+                </div>
+            </div>
+
+            <div class="col l-3">
+                <div class="my-column">
+                    <h1>Column 2</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
