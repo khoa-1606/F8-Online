@@ -14,6 +14,9 @@
 
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/Grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+    
 
     <!-- icon -->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
@@ -28,8 +31,8 @@
     <!-- Block__Element--Modifier -->
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                             Vào cửa hàng trên ứng dụng F8-Shop
@@ -185,7 +188,7 @@
 
                 <!-- Header width search -->
                 <div class="header-width-search">
-                    <div class="header__logo">
+                    <div class="header__logo hide-on-tablet">
                         <!--  onclick="location.reload()" -> reload page -->
                         <a href="" class="header__logo-link" onclick="location.reload()">
                             <svg class="header__logo-img" viewBox="0 0 192 65">
@@ -419,7 +422,7 @@
         </header>
 
         <div class="app__container">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row app_content">
                     <div class="grid__column-2">
                         <nav class="category">
@@ -444,7 +447,7 @@
     
     
                     <div class="grid__column-10">
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__lable">Sắp xếp theo:</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
                             <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -854,7 +857,7 @@
         </div>
 
         <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                     <div class="grid__column-2-4">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -940,7 +943,7 @@
             </div>
 
             <div class="footer__mid">
-                <div class="grid">
+                <div class="grid wide">
                     <ul class="footer__mid-list">
                         <li class="footer__mid-item">
                             <a href="" class="footer__mid-link">Chính sách bảo mật</a>
@@ -966,7 +969,7 @@
             </div>
 
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__text">© 2023 - Bản quyền thuộc về Công ty MyCV</p>
                 </div>
             </div>
