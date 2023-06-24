@@ -188,6 +188,10 @@
 
                 <!-- Header width search -->
                 <div class="header-width-search">
+                    <label for="mobile-search-checkbox" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+
                     <div class="header__logo hide-on-tablet">
                         <!--  onclick="location.reload()" -> reload page -->
                         <a href="" class="header__logo-link" onclick="location.reload()">
@@ -200,6 +204,9 @@
                             </svg>
                         </a>
                     </div>
+
+                    <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
 
                     <div class="header__search">
                         <div class="header__search-input-wrap">
@@ -246,7 +253,7 @@
                     <div class="header__cart">
                         <div class="header__cart-wrap">
                             <i class="header__cart-icon far fa-shopping-cart"></i>
-                            <span class="header__cart-notice">7</span>
+                            <span class="header__cart-notice">3</span>
 
                             <!-- No cart: header__cart-list--no-cart -->
                             <div class="header__cart-list"> <!-- No cart: header__cart-list--no-cart -->
@@ -323,7 +330,7 @@
                                         </div>
                                     </li>
 
-                                    <!-- Cart item 4 -->
+                                    <!-- Cart item 4
                                     <li class="header__cart-item">
                                         <img class="header__cart-img" src="./assets/img/keyboard/Logitech-ProX-Gaming.jpg" alt="">
                                         <div class="header__cart-item-info">
@@ -345,7 +352,7 @@
                                         </div>
                                     </li>
 
-                                    <!-- Cart item 5 -->
+                                    Cart item 5
                                     <li class="header__cart-item">
                                         <img class="header__cart-img" src="./assets/img/ram/ddr4-gskill-tzb-2.png" alt="">
                                         <div class="header__cart-item-info">
@@ -367,7 +374,7 @@
                                         </div>
                                     </li>
 
-                                    <!-- Cart item 6 -->
+                                    Cart item 6
                                     <li class="header__cart-item">
                                         <img class="header__cart-img" src="./assets/img/ram/ddr4-gskill-tzb-2.png" alt="">
                                         <div class="header__cart-item-info">
@@ -389,7 +396,7 @@
                                         </div>
                                     </li>
 
-                                    <!-- Cart item 7 -->
+                                    Cart item 7
                                     <li class="header__cart-item">
                                         <img class="header__cart-img" src="./assets/img/ram/ddr4-gskill-tzb-2.png" alt="">
                                         <div class="header__cart-item-info">
@@ -409,7 +416,7 @@
                                                 <span class="header__cart-item-remove">Xóa</span>
                                             </div>
                                         </div>
-                                    </li>
+                                    </li> -->
                                 </ul>
 
                                 <a href="#" class="header__cart-view-cart btn btn--primary">Xem giỏ hàng</a>
@@ -419,12 +426,45 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Sort bar -->
+            <ul class="header__sort-bar">
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Liên quan</a>
+                </li>
+
+                <li class="header__sort-item header__sort-item--active">
+                    <a href="" class="header__sort-link">Mới nhất</a>
+                </li>
+
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Bán chạy</a>
+                </li>
+
+                <li class="header__sort-item">
+                    <a href="" class="header__sort-link">Giá</a>
+                    <!-- <i class="select-input__icon fal fa-chevron-down"></i>
+                    <ul class="select-input__list">
+                        <li class="select-input__item">
+                            <a href="" class="select-input__link">
+                                Giá: Thấp đến cao
+                            </a>
+                        </li>
+                        <li class="select-input__item">
+                            <a href="" class="select-input__link">
+                                Giá: Cao đến thấp
+                            </a>
+                        </li>
+                    </ul> -->
+                </li>
+
+            </ul>
         </header>
 
         <div class="app__container">
             <div class="grid wide">
-                <div class="grid__row app_content">
-                    <div class="grid__column-2">
+                <div class="row sm-gutter app__content">
+                    <div class="col l-2 m-0 c-0">
                         <nav class="category">
                             <h3 class="category__heading">Danh mục</h3>
             
@@ -444,9 +484,92 @@
                             </ul>
                         </nav>
                     </div>
+                    
+                    <!-- danh muc truot ngang tren mobile -->
+                    <nav class="mobile__category">
+                        <ul class="mobile__category-list">
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Top Best Selling
+                                    </span>
+             
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Gaming Best Selling Gaming Best Selling
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Office Best Selling
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Độc quyền Online
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Bàn phím cơ Custom
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Chuột Gaming
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Bàn Gaming
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Ghế Gaming
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Tai nghe Gaming
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        Ram HDD - SSD
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="mobile__category-item">
+                                <a href="" class="mobile__category-item-link">
+                                    <span class="mobile__category-item-name">
+                                        CPU - GPU
+                                    </span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
     
-    
-                    <div class="grid__column-10">
+                    <div class="col l-10 m-12 c-12">
                         <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__lable">Sắp xếp theo:</span>
                             <button class="home-filter__btn btn">Phổ biến</button>
@@ -491,9 +614,9 @@
 
                         <div class="home-product">
                             <!-- grid -> row -> column -->
-                            <div class="grid__row">
+                            <div class="row sm-gutter">
                     <!-- home-product-item__1 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <img class="home-product-item__img" src="./assets/img/ram/RAM XPG D50 ROG Certified 16G.png">
                                         <h4 class="home-product-item__name">Ram Desktop Adata XPG D50 ROG Certified 16G - 3600MHz</h4>
@@ -537,53 +660,8 @@
                                         </div>
                                     </a>
                                 </div>
-                    <!-- home-product-item__2 -->
-                                <div class="grid__column-2-4">
-                                    <a class="home-product-item" href="">
-                                        <img class="home-product-item__img" src="./assets/img/cpu/techzones-intel-core-i9-9900k-1.jpg">
-                                        <h4 class="home-product-item__name">Techzones Intel Core i9-9900K</h4>
-                                        <div class="home-product-item__price">
-                                            <span class="home-product-item__price-old">12.100.000đ</span>
-                                            <span class="home-product-item__price-current"> 11.900.000đ</span>
-                                        </div>
-
-                                        <div class="home-product-item__action">
-                                            <span class="home-product-item__like">
-                                                <!-- Add class home-product-item__like--liked -> display home-product-item__like-icon-fill
-                                                    Delete class home-product-item__like--liked -> display home-product-item__like-icon-empty-->
-                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
-                                                <!-- icon liked -->
-                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                            </span>
-                                            <div class="home-product-item__rating">
-                                                <i class="home-product-item__star--gold fas fa-star"></i>
-                                                <i class="home-product-item__star--gold fas fa-star"></i>
-                                                <i class="home-product-item__star--gold fas fa-star"></i>
-                                                <i class="home-product-item__star--gold fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-
-                                            <span class="home-product-item__sold">57 đã bán</span>
-                                        </div>
-
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Intel</span>
-                                            <span class="home-product-item__origin-name">Hoa Kỳ</span>
-                                        </div>
-
-                                        <div class="home-product-item__favourite">
-                                            <i class="far fa-check"></i>
-                                            <span>Yêu thích</span>
-                                        </div>
-
-                                        <div class="home-product-item__sale-off">
-                                            <span class="home-product-item__sale-off-percent">15%</span>
-                                            <span class="home-product-item__lable-sale-off-lable">GIẢM</span>
-                                        </div>
-                                    </a>
-                                </div>
                     <!-- home-product-item__3 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <img class="home-product-item__img" src="./assets/img/keyboard/Logitech-ProX-Gaming.jpg">
                                         <h4 class="home-product-item__name">Logitech Pro Gaming</h4>
@@ -627,53 +705,8 @@
                                         </div>
                                     </a>
                                 </div>
-                    <!-- home-product-item__4 -->
-                                <div class="grid__column-2-4">
-                                    <a class="home-product-item" href="">
-                                        <img class="home-product-item__img" src="./assets/img/cpu/core-i7.jpg">
-                                        <h4 class="home-product-item__name">CPU Intel Core i7-12700K</h4>
-                                        <div class="home-product-item__price">
-                                            <span class="home-product-item__price-old">10.349.000đ</span>
-                                            <span class="home-product-item__price-current"> 10.149.000đ</span>
-                                        </div>
-
-                                        <div class="home-product-item__action">
-                                            <span class="home-product-item__like home-product-item__like--liked">
-                                                <!-- Add class home-product-item__like--liked -> display home-product-item__like-icon-fill
-                                                    Delete class home-product-item__like--liked -> display home-product-item__like-icon-empty-->
-                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
-                                                <!-- icon liked -->
-                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
-                                            </span>
-                                            <div class="home-product-item__rating">
-                                                <i class="home-product-item__star--gold fas fa-star"></i>
-                                                <i class="home-product-item__star--gold fas fa-star"></i>
-                                                <i class="home-product-item__star--gold fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-
-                                            <span class="home-product-item__sold">5 đã bán</span>
-                                        </div>
-
-                                        <div class="home-product-item__origin">
-                                            <span class="home-product-item__brand">Intel</span>
-                                            <span class="home-product-item__origin-name">Hoa Kỳ</span>
-                                        </div>
-
-                                        <div class="home-product-item__favourite">
-                                            <i class="far fa-check"></i>
-                                            <span>Yêu thích</span>
-                                        </div>
-
-                                        <div class="home-product-item__sale-off">
-                                            <span class="home-product-item__sale-off-percent">10%</span>
-                                            <span class="home-product-item__lable-sale-off-lable">GIẢM</span>
-                                        </div>
-                                    </a>
-                                </div>
                     <!-- home-product-item__5 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <img class="home-product-item__img" src="./assets/img/ocung/SSD Kingston 480GB Sata 2.5''.jpg">
                                         <h4 class="home-product-item__name">SSD Kingston 480GB Sata 2.5"</h4>
@@ -718,7 +751,7 @@
                                     </a>
                                 </div>
                     <!-- home-product-item__6 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <img class="home-product-item__img" src="./assets/img/ram/corsair_vengeance_rgb_pro_black_1.jpg">
                                         <h4 class="home-product-item__name">Ram Techzones Intel Core i5-9400F</h4>
@@ -763,7 +796,7 @@
                                     </a>
                                 </div>
                     <!-- home-product-item__7 -->
-                                <div class="grid__column-2-4">
+                                <div class="col l-2-4 m-4 c-6">
                                     <a class="home-product-item" href="">
                                         <img class="home-product-item__img" src="./assets/img/ram/RAM PC GSkill Trident Z5 RGB 64GB DDR5 5600Mhz.jpg">
                                         <h4 class="home-product-item__name">Ram GSkill Trident Z5 RGB 64GB</h4>
@@ -806,6 +839,186 @@
                                             <span class="home-product-item__lable-sale-off-lable">GIẢM</span>
                                         </div>
                                     </a>
+                                </div>
+                    <!-- home-product-item__1 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                    <a class="home-product-item" href="">
+                                        <img class="home-product-item__img" src="./assets/img/ram/RAM XPG D50 ROG Certified 16G.png">
+                                        <h4 class="home-product-item__name">Ram Desktop Adata XPG D50 ROG Certified 16G - 3600MHz</h4>
+                                        <div class="home-product-item__price">
+                                            <span class="home-product-item__price-old">2.690.000đ</span>
+                                            <span class="home-product-item__price-current"> 2.390.000đ</span>
+                                        </div>
+
+                                        <div class="home-product-item__action">
+                                            <span class="home-product-item__like home-product-item__like--liked">
+                                                <!-- Add class home-product-item__like--liked -> display home-product-item__like-icon-fill
+                                                    Delete class home-product-item__like--liked -> display home-product-item__like-icon-empty-->
+                                                <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                <!-- icon liked -->
+                                                <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                            </span>
+                                            <div class="home-product-item__rating">
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="home-product-item__star--gold fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+
+                                            <span class="home-product-item__sold">16 đã bán</span>
+                                        </div>
+
+                                        <div class="home-product-item__origin">
+                                            <span class="home-product-item__brand">Asus</span>
+                                            <span class="home-product-item__origin-name">Taiwan</span>
+                                        </div>
+
+                                        <div class="home-product-item__favourite">
+                                            <i class="far fa-check"></i>
+                                            <span>Yêu thích</span>
+                                        </div>
+
+                                        <div class="home-product-item__sale-off">
+                                            <span class="home-product-item__sale-off-percent">10%</span>
+                                            <span class="home-product-item__lable-sale-off-lable">GIẢM</span>
+                                        </div>
+                                    </a>
+                                </div>
+                     <!-- home-product-item__5 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                            <a class="home-product-item" href="">
+                                                <img class="home-product-item__img" src="./assets/img/ocung/SSD Kingston 480GB Sata 2.5''.jpg">
+                                                <h4 class="home-product-item__name">SSD Kingston 480GB Sata 2.5"</h4>
+                                                <div class="home-product-item__price">
+                                                    <span class="home-product-item__price-old">1.690.000đ</span>
+                                                    <span class="home-product-item__price-current"> 1.490.000đ</span>
+                                                </div>
+        
+                                                <div class="home-product-item__action">
+                                                    <span class="home-product-item__like home-product-item__like--liked">
+                                                        <!-- Add class home-product-item__like--liked -> display home-product-item__like-icon-fill
+                                                            Delete class home-product-item__like--liked -> display home-product-item__like-icon-empty-->
+                                                        <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                        <!-- icon liked -->
+                                                        <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="home-product-item__rating">
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+        
+                                                    <span class="home-product-item__sold">34 đã bán</span>
+                                                </div>
+        
+                                                <div class="home-product-item__origin">
+                                                    <span class="home-product-item__brand">Kingston</span>
+                                                    <span class="home-product-item__origin-name">Hoa Kỳ</span>
+                                                </div>
+        
+                                                <div class="home-product-item__favourite">
+                                                    <i class="far fa-check"></i>
+                                                    <span>Yêu thích</span>
+                                                </div>
+        
+                                                <div class="home-product-item__sale-off">
+                                                    <span class="home-product-item__sale-off-percent">7%</span>
+                                                    <span class="home-product-item__lable-sale-off-lable">GIẢM</span>
+                                                </div>
+                                            </a>
+                                </div>
+                    <!-- home-product-item__6 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                            <a class="home-product-item" href="">
+                                                <img class="home-product-item__img" src="./assets/img/ram/corsair_vengeance_rgb_pro_black_1.jpg">
+                                                <h4 class="home-product-item__name">Ram Techzones Intel Core i5-9400F</h4>
+                                                <div class="home-product-item__price">
+                                                    <span class="home-product-item__price-old">4.450.000đ</span>
+                                                    <span class="home-product-item__price-current"> 4.130.000đ</span>
+                                                </div>
+        
+                                                <div class="home-product-item__action">
+                                                    <span class="home-product-item__like home-product-item__like--liked">
+                                                        <!-- Add class home-product-item__like--liked -> display home-product-item__like-icon-fill
+                                                            Delete class home-product-item__like--liked -> display home-product-item__like-icon-empty-->
+                                                        <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                        <!-- icon liked -->
+                                                        <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="home-product-item__rating">
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+        
+                                                    <span class="home-product-item__sold">36 đã bán</span>
+                                                </div>
+        
+                                                <div class="home-product-item__origin">
+                                                    <span class="home-product-item__brand">Intel</span>
+                                                    <span class="home-product-item__origin-name">Hoa Kỳ</span>
+                                                </div>
+        
+                                                <div class="home-product-item__favourite">
+                                                    <i class="far fa-check"></i>
+                                                    <span>Yêu thích</span>
+                                                </div>
+        
+                                                <div class="home-product-item__sale-off">
+                                                    <span class="home-product-item__sale-off-percent">15%</span>
+                                                    <span class="home-product-item__lable-sale-off-lable">GIẢM</span>
+                                                </div>
+                                            </a>
+                                </div>
+                    <!-- home-product-item__7 -->
+                                <div class="col l-2-4 m-4 c-6">
+                                            <a class="home-product-item" href="">
+                                                <img class="home-product-item__img" src="./assets/img/ram/RAM PC GSkill Trident Z5 RGB 64GB DDR5 5600Mhz.jpg">
+                                                <h4 class="home-product-item__name">Ram GSkill Trident Z5 RGB 64GB</h4>
+                                                <div class="home-product-item__price">
+                                                    <span class="home-product-item__price-old">8.950.000đ</span>
+                                                    <span class="home-product-item__price-current"> 8.550.000đ</span>
+                                                </div>
+        
+                                                <div class="home-product-item__action">
+                                                    <span class="home-product-item__like home-product-item__like--liked">
+                                                        <!-- Add class home-product-item__like--liked -> display home-product-item__like-icon-fill
+                                                            Delete class home-product-item__like--liked -> display home-product-item__like-icon-empty-->
+                                                        <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                        <!-- icon liked -->
+                                                        <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                    </span>
+                                                    <div class="home-product-item__rating">
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                        <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    </div>
+        
+                                                    <span class="home-product-item__sold">96 đã bán</span>
+                                                </div>
+        
+                                                <div class="home-product-item__origin">
+                                                    <span class="home-product-item__brand">Intel</span>
+                                                    <span class="home-product-item__origin-name">Hoa Kỳ</span>
+                                                </div>
+        
+                                                <div class="home-product-item__favourite">
+                                                    <i class="far fa-check"></i>
+                                                    <span>Yêu thích</span>
+                                                </div>
+        
+                                                <div class="home-product-item__sale-off">
+                                                    <span class="home-product-item__sale-off-percent">5%</span>
+                                                    <span class="home-product-item__lable-sale-off-lable">GIẢM</span>
+                                                </div>
+                                            </a>
                                 </div>
                             </div>
                         </div>
@@ -857,9 +1070,9 @@
         </div>
 
         <footer class="footer">
-            <div class="grid wide">
-                <div class="grid__row">
-                    <div class="grid__column-2-4">
+            <div class="grid wide footer__content">
+                <div class="row">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
@@ -874,7 +1087,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Giới thiệu</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
@@ -889,7 +1102,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Danh mục</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
@@ -904,7 +1117,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-4 c-6">
                         <h3 class="footer__heading">Theo dõi</h3>
                         <ul class="footer__list">
                             <li class="footer-item">
@@ -925,7 +1138,7 @@
                         </ul>
                     </div>
 
-                    <div class="grid__column-2-4">
+                    <div class="col l-2-4 m-8 c-12">
                         <h3 class="footer__heading">Vào cửa hàng trên ứng dụng</h3>
                         <div class="footer__download">
                             <img class="footer__download-qr" src="./assets/img/QR-code.png" alt="QR code">
@@ -942,7 +1155,7 @@
                 </div>
             </div>
 
-            <div class="footer__mid">
+            <!-- <div class="footer__mid">
                 <div class="grid wide">
                     <ul class="footer__mid-list">
                         <li class="footer__mid-item">
@@ -966,7 +1179,7 @@
 
                     </ul>
                 </div>
-            </div>
+            </div> -->
 
             <div class="footer__bottom">
                 <div class="grid wide">

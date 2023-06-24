@@ -1,3 +1,6 @@
+.app {
+    overflow: hidden;
+}
 .header {
     height: var(--header-height);
     background-image: linear-gradient(0, #ef6433, #f53e2d);
@@ -553,12 +556,22 @@
     align-items: center;
     margin: 0 8px;
 }
+.header__mobile-search {
+    padding: 0 12px;
+    display: none;
+}
+.header__mobile-search-icon {
+    font-size: 2.6rem;
+    color: var(--white-color);
+}
 .header__logo {
     width: 200px;
 }
 .header__logo-link {
     color:  transparent;
     text-decoration: none;
+    display: block;
+    line-height: 0;
 }
 .header__logo-img {
     width: 150px;
@@ -570,6 +583,9 @@
     border-radius: 2px;
     display: flex;
     align-items: center;
+}
+.header__search-checkbox:checked ~ .header__search {
+    display: flex;
 }
 .header__cart {
     width: 150px;
@@ -583,6 +599,7 @@
     display: inline-block;
     padding: 0 12px;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 }
 .header__cart-icon {
     color: var(--white-color);
@@ -614,7 +631,7 @@
     padding-left: 0;
     list-style: none;
 /* độ cao theo tỉ lệ màn hình */
-    height: 50vh; /*view port height*/
+    max-height: 50vh; /*view port height*/
 /* Khi số lượng sp vượt quá độ cao của thẻ cha
 => auto hiển thị thanh roll 
 => overflow-y -> theo trục dọc y */
@@ -902,11 +919,59 @@
     border-bottom-right-radius: 3px;
 } */
 
+/* Header sort bar */
+.header__sort-bar {
+    position: fixed;
+    /* display: flex; */
+    margin-top: 0;
+    top: 68px;
+    left: 0;
+    right: 0;
+    height: var(--header-sort-bar-height);
+    background-color: var(--white-color);
+    list-style: none;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+}
+.header__sort-item {
+    flex: 1;
+}
+.header__sort-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    display: block;
+    line-height: var(--header-sort-bar-height);
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.header__sort-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 60%;
+    border-left: 1px solid #e5e5e5;
+    transform: translateY(-50%);
+}
+.header__sort-item--active .header__sort-link {
+    color: var(--primary-color);
+}
+/* .header__sort-item--active::after .header__sort-link {
+    text-decoration: underline;
+    border-bottom: 2px solid var(--primary-color);
+} */
+.header__sort-item:first-child .header__sort-link::before {
+    display: none;
+}
 /* --------------------- container ----------------- */
 .app__container {
     background-color: #f5f5f5;
 }
-.app_content {
+.app__content {
     padding-top: 32px;
 }
 .category {
@@ -1032,6 +1097,65 @@ can chinh active o giua theo truc doc
 .home-filter__page-control {
     box-shadow: 0 1px 1px #ccc;
 }
+/* Category mobile */
+.mobile__category {
+    display: none;
+}
+.mobile__category-list {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    max-width: 100%;
+    overflow-x: auto;
+}
+/* ẩn thanh cuộn ngang */
+.mobile__category-list::-webkit-scrollbar {
+    display: none;
+}
+.mobile__category-item {
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+.mobile__category-item:nth-of-type(3n +1) .mobile__category-item-link {
+    background-color: #87AFD8;
+}
+.mobile__category-item:nth-of-type(3n +2) .mobile__category-item-link {
+    background-color: #76C9BD;
+}
+.mobile__category-item:nth-of-type(3n +3) .mobile__category-item-link {
+    background-color: #88CF81;
+}
+.mobile__category-item-link {
+    --line-height: 2rem;
+    text-decoration: none;
+    color: var(--white-color);
+    font-size: 1.4rem;
+    text-align: center;
+    font-weight: 300;
+    padding: 0 6px;
+    line-height: var(--line-height);
+    height: calc(var(--line-height) * 2);
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    width: 108px;
+    border-radius: 4px;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default
+    /* justify-content: center;
+    align-items: center; */
+}
+/* .mobile__category-item-name {
+    font-size: 1.4rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+} */
 /* ---------------- Product item ------------------ */
 .home-product {
     margin-bottom: 10px;
@@ -1216,6 +1340,7 @@ i.home-product-item__like-icon-fill {
 /* --------------- Pagination ----------------- */
 .home-product__pagination {
     margin: 50px 0 32px 0;
+    padding-left: 0;
 }
 /* --------------- Footer ----------------- */
 .footer {
