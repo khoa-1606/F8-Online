@@ -1097,7 +1097,7 @@ can chinh active o giua theo truc doc
 .home-filter__page-control {
     box-shadow: 0 1px 1px #ccc;
 }
-/* Category mobile */
+/* ------------------- Category mobile ----------------- */
 .mobile__category {
     display: none;
 }
@@ -1116,16 +1116,16 @@ can chinh active o giua theo truc doc
     flex-shrink: 0;
     margin-right: 10px;
 }
-.mobile__category-item:nth-of-type(3n +1) .mobile__category-item-link {
+.mobile__category-item:nth-of-type(3n +1) .mobile__category-link {
     background-color: #87AFD8;
 }
-.mobile__category-item:nth-of-type(3n +2) .mobile__category-item-link {
+.mobile__category-item:nth-of-type(3n +2) .mobile__category-link {
     background-color: #76C9BD;
 }
-.mobile__category-item:nth-of-type(3n +3) .mobile__category-item-link {
+.mobile__category-item:nth-of-type(3n +3) .mobile__category-link {
     background-color: #88CF81;
 }
-.mobile__category-item-link {
+.mobile__category-link {
     --line-height: 2rem;
     text-decoration: none;
     color: var(--white-color);
@@ -1135,27 +1135,19 @@ can chinh active o giua theo truc doc
     padding: 0 6px;
     line-height: var(--line-height);
     height: calc(var(--line-height) * 2);
-    overflow: hidden;
+    max-width: 120px;
     display: block;
+    border-radius: 4px;
+    overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    width: 108px;
-    border-radius: 4px;
     user-select: none;
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
-    cursor: default
-    /* justify-content: center;
-    align-items: center; */
+    cursor: default;
 }
-/* .mobile__category-item-name {
-    font-size: 1.4rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-} */
+
 /* ---------------- Product item ------------------ */
 .home-product {
     margin-bottom: 10px;
