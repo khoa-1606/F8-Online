@@ -100,10 +100,9 @@ var e = typeof d;
 console.log(c, d, e) // Output: 'string' 'number' 'string'
 
 /*
-Giải thích
-typeof của 1 số sẽ trả về 'number'.
-
-typeof của 1 chuỗi sẽ trả về 'string'.
-
-Chú ý: Kết quả trả về của typeof sẽ luôn là 1 chuỗi, vậy nên typeof của d sẽ là 'string'.
+Giải thích:
+- typeof của 1 số sẽ trả về 'number'
+- typeof của 1 chuỗi sẽ trả về 'string'
+- Chú ý: Kết quả trả về của typeof sẽ luôn là 1 chuỗi,
+vậy nên typeof của d sẽ là 'string'
 */

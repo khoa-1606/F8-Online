@@ -14,6 +14,7 @@ Toán tử:
                 var a = 5;
                 a++;
                 console.log(a);
+
     *** Toán tử gán - Assginment
         var FullName = 'Khoa';
     E.x:
@@ -107,8 +108,8 @@ console.log(name);
 /* ---------- Toán tử so sánh - Comparison ---------- */
 /*
 Toán tử
-==      -->      Bằng
-!=      -->      Không bằng
+==      -->      Bằng - tương đối
+!=      -->      Không bằng - tương đối
 >       -->      Lớn hơn
 <       -->      Nhỏ hơn
 >=      -->      Lớn hơn hoặc bằng
@@ -145,6 +146,21 @@ var f = c === d; // Biến c bằng biến d nên f = true.
 var g = a >= c; // Biến a lớn hơn biến c nên g = true.
 
 console.log(e, f, g) // Output: ?
+/* ---------- Toán tử so sánh (P2) - Comparison ---------- */
+/**
+ * === : so sánh cả giá tri và kiểu dữ liệu - tuyệt đối
+ * !== : so sánh cả giá tri và kiểu dữ liệu - tuyệt đối
+ * 
+*/
+var a1 = 1;
+var b1 = '1';
+console.log(a1 === b1);
+
+//   !== : so sánh cả giá tri và kiểu dữ liệu - tuyệt đối
+var a2 = 1;
+var b2 = '1';
+console.log(a2 !== b2);
+
 
 /* ---------- Boolean ---------- */
 //Kết quả trả về 2 giá trị: true và false
@@ -268,7 +284,6 @@ if (typeof a === "number" || typeof b === "string" || c === undefined) {
 } else {
     console.log(`Kiểm tra dữ liệu đề sai`);
 }
-
 
 
 
