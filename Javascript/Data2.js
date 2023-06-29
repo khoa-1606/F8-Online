@@ -34,11 +34,11 @@ var b = 2;
 /*
 => đọc giá trị từ trái sang phải
 => giá trị nào không nằm trong 6 giá trị [false]
-    => đọc giá tri kế tiếp cho đến cuối và in giá tri cuối cùng
+    => đọc giá trị kế tiếp cho đến cuối và in giá tri cuối cùng
 => Nếu giá trị nằm trong 6 giá trị [false]
     => lấy giá trị đó gán cho giá trị cha và không đoc giá trị kế tiếp
 Như ví dụ trên:
-- vi trí thứ 3 có giá trị là NaN (nằm trong 6 g.trị [false]
+- vị trí thứ 3 có giá trị là NaN (nằm trong 6 g.trị [false]
 nên sẽ lấy NaN gán cho result => false
 - Sẽ in ra màn hình là DIEU KIEN SAI
 */
@@ -57,7 +57,7 @@ if (result) {
 /*
 => đọc giá trị từ trái sang phải
 => nếu giá trị đầu tiên nằm trong 6 giá trị [false]
-    => đọc giá tri kế tiếp và in giá tri kế tiếp
+    => đọc giá tri kế tiếp và in giá trị kế tiếp
 => Nếu giá trị bất kì ở giữa nằm trong 6 giá trị [false]
     => lấy giá trị đầu tiên gán cho giá trị cha và in ra màn hình
 Như ví dụ trên:
