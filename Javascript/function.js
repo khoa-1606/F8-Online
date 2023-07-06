@@ -116,7 +116,7 @@ E.x:
     }
     showMessage();
 3. Định nghĩa hàm trong hàm?
-E.x:*/
+E.x:
     function showMessage() {
         function showMessage2(){
             console.log('Message 2');
@@ -124,7 +124,7 @@ E.x:*/
         showMessage2();
     }
     showMessage();
-
+*/
 
 //-------------------------------------------------//
 /*
@@ -150,12 +150,29 @@ E.x 2:
 3- Arrow function - Js nâng cao
 */
 
+/*
+ ----------- Kiểu dữ liệu chuỗi - string ----------- 
+1. Tạo chuỗi
+    - Các cách tạo chuỗi
+    - Nên dùng cách nào? Lý do?
+    - Kiểm tra data type
+2. Một số case sử dụng backslash (\) gg->backslash in javascript
+        var fullName = 'Phuong Pham la \'Sieu nhan\'';
+        console.log(fullName);
+3. Xem độ dài chuỗi
+        var fullName = 'Phuong Pham';
+        console.log(fullName.length);
+4. Chú ý độ dài khi viết code -> max 80 ký tự
+5. Template string ES6
+*/
 
-
-
-
-
-
+//- Các cách tạo chuỗi
+//var fullName = 'Phuong Pham'; cach1 - sd cach 1
+//var fullName = new String('Phuong Pham'); cach2
+//5. Template string ES6
+var firstName = 'Khoa';
+var lastName = 'Vo';
+console.log(`Toi la: ${firstName} ${lastName}`);
 
 
 
