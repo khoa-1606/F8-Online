@@ -169,10 +169,81 @@ E.x 2:
 //- Các cách tạo chuỗi
 //var fullName = 'Phuong Pham'; cach1 - sd cach 1
 //var fullName = new String('Phuong Pham'); cach2
-//5. Template string ES6
+
+/*
+5. Template string ES6
 var firstName = 'Khoa';
 var lastName = 'Vo';
-console.log(`Toi la: ${firstName} ${lastName}`);
+console.log(`Toi la: ${firstName} ${lastName}`);*/
+
+/* Cho trước một biến email, hãy gán giá trị cho nó là một chuỗi.
+const email = 'huynhkhoavo1606@gmail.com'; */
+
+//----------------------------------------------------//
+//Các cách làm việc với chuỗi
+//*** Keywork: Javascript string methods
+
+var myString = 'Hoc JS tai F8!';
+
+
+// 1. Length - độ dài chuỗi ký tự
+//console.log(myString.length);
+
+// 2. Find index - tìm vị trí trong 1 chuỗi
+// Tìm từ đầu chuỗi
+// console.log(myString.indexOf('JS'));
+// Tìm từ cuối chuỗi
+// var myString = 'Hoc JS tai F8 - JS - PHP!';
+// console.log(myString.lastIndexOf('JS'));
+
+// 3. Cut string
+// console.log(myString.slice(4, 6));
+// console.log(myString.slice(4));
+// console.log(myString.slice(-3, -1));
+
+// 4. Replace - thay thế JS trong chuỗi thành Javascript
+// chỉ replace phần tử đầu tiên đc tìm thấy trong chuỗi
+// console.log(myString.replace('JS', 'Javacsript'));
+// Biểu thúc chính quy - Trường hợp trong chuỗi có nhiều JS thì cú pháp sẽ là:
+// console.log(myString.replace(/JS/g, 'Javacsript'));
+
+// 5. Convert to upper case - định dạng lại chuỗi -> in hoa
+// console.log(myString.toUpperCase());
+
+// 6. Convert to lower case - định dạng lại chuỗi -> in thường
+// console.log(myString.toLowerCase());
+
+// 7. Trim - loại bỏ những khoảng trắng đầu & cuối chuỗi
+var myName = '   Hoc JS tai F8!   ';
+console.log(myName.trim().length);
+
+// 8. Split - tách 1 chuỗi thành array
+var languages = 'Javascript, PHP, Ruby, C++';
+console.log(languages.split(', '));
+
+var languages1 = 'Javascript';
+console.log(languages1.split(''));
+
+// 9. Get a character by index - lấy 1 ký tự bởi 1 index cho trước
+const myString2 = 'Khoa Vo';
+console.log(myString2.charAt(5)); // cách 1
+console.log(myString2[1]); // cách 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
