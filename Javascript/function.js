@@ -187,29 +187,51 @@ var myString = 'Hoc JS tai F8!';
 
 
 // 1. Length - độ dài chuỗi ký tự
-//console.log(myString.length);
+    //console.log(myString.length);
+    /*
+    hoàn thành hàm getContentLength. Hàm này sẽ trả về độ dài của tham số content.
+    function getContentLength(content) {
+        if (typeof content === 'string' || content instanceof String) {
+        return content.length;
+    } else {
+        return 0; // hoặc giá trị phù hợp tùy thuộc vào yêu cầu
+    }
+    }
+
+    // Mở tab Console để xem kết quả trực quan
+    console.log(getContentLength('JavaScript'));
+    console.log(getContentLength('Hello World'));
+    */
 
 // 2. Find index - tìm vị trí trong 1 chuỗi
 // Tìm từ đầu chuỗi
-// console.log(myString.indexOf('JS'));
+    // console.log(myString.indexOf('JS')); 
 // Tìm từ cuối chuỗi
 // var myString = 'Hoc JS tai F8 - JS - PHP!';
-// console.log(myString.lastIndexOf('JS'));
+    // console.log(myString.lastIndexOf('JS'));
 
 // 3. Cut string
-// console.log(myString.slice(4, 6));
-// console.log(myString.slice(4));
-// console.log(myString.slice(-3, -1));
+    // console.log(myString.slice(4, 6));
+    // console.log(myString.slice(4));
+    // console.log(myString.slice(-3, -1));
 
 // 4. Replace - thay thế JS trong chuỗi thành Javascript
 // chỉ replace phần tử đầu tiên đc tìm thấy trong chuỗi
-// console.log(myString.replace('JS', 'Javacsript'));
+    // console.log(myString.replace('JS', 'Javacsript'));
 // Biểu thúc chính quy - Trường hợp trong chuỗi có nhiều JS thì cú pháp sẽ là:
-// console.log(myString.replace(/JS/g, 'Javacsript'));
+    // console.log(myString.replace(/JS/g, 'Javacsript'));
 
 // 5. Convert to upper case - định dạng lại chuỗi -> in hoa
-// console.log(myString.toUpperCase());
-
+    // console.log(myString.toUpperCase());
+    /*
+    tạo hàm getUpperCaseName có 1 tham số là name, hàm này sẽ trả về phiên bản chữ viết hoa của giá trị mà nó nhận được từ name
+    function getUpperCaseName(name) {
+        return name.toUpperCase();
+    }
+    // Expected results:
+    console.log(getUpperCaseName("Nguyen van a")) // "NGUYEN VAN A"
+    console.log(getUpperCaseName("nGuyen vAn C")) // "NGUYEN VAN C"
+    */
 // 6. Convert to lower case - định dạng lại chuỗi -> in thường
 // console.log(myString.toLowerCase());
 
@@ -224,11 +246,30 @@ console.log(languages.split(', '));
 var languages1 = 'Javascript';
 console.log(languages1.split(''));
 
+    /*
+    Cho trước chuỗi coursesStr chứa tên các khóa học cách nhau bởi dấu ,.
+
+    Bạn hãy viết hàm strToArray nhận vào 1 tham số là str và trả về 1 mảng chứa tên các khóa học.
+
+    var coursesStr = 'HTML & CSS, JavaScript, ReactJS';
+
+    function strToArray(str) {
+        if (str === "") {
+        return [];
+        }
+        return str.split(",");
+    }
+
+    // Expected results
+    console.log(strToArray(coursesStr)) 
+
+    // Output: ['HTML & CSS', 'JavaScript', 'ReactJS']
+    */
+
 // 9. Get a character by index - lấy 1 ký tự bởi 1 index cho trước
 const myString2 = 'Khoa Vo';
 console.log(myString2.charAt(5)); // cách 1
 console.log(myString2[1]); // cách 2
-
 
 
 
