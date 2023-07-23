@@ -105,10 +105,11 @@
 .header__navbar-user-item--separate {
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
-/* .header__navbar-user-item:last-child:hover {
-    color: red;
+.header__navbar-user-item:last-child a:hover {
+    color: white;
+    font-weight: 500;
     background-color: red;
-} */
+}
 
 /* hover => display QR code */
 .header__navbar-item--has-qr:hover .header__qr {
