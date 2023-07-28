@@ -39,6 +39,7 @@ delete myInfo.age;
 console.log(myInfo);
 
 /*
+E.x:
 Tạo biến student và gán cho nó 1 object, 
 object này có 3 keys để thể hiện tên, 
 tuổi và địa chỉ của sinh viên. 
