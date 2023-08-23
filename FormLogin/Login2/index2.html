@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login 2</title>
+    <link rel="stylesheet" href="index2.css">
+
+    <!-- Tạo logo trên tên của tab trang web -->
+    <link rel="shortcut icon" href="../img/ava8.jpg" type="image/x-icon">
+</head>
+<body>
+
+<!-- Header -->
+    <header>
+        <!-- <h2 class="logo">LOGO</h2> -->
+        <div class="logo">
+            <a href="https://www.facebook.com/edward1606/"><img src="../img/ava8.jpg" alt="Avatar"></a>
+            <p>Khoa Vo</p>
+        </div>
+        <nav class="navigation">
+            <a href="#">Home</a>
+            <a href="#">Contact</a>
+            <a href="#">About</a>
+            <a href="#">Service</a>
+            <button class="btnlogin-popup">Login</button>
+        </nav>
+    </header>
+
+<!-- halaman login -->
+    <div class="wrapper">
+        <div class="form-box login">
+            <h2>Login</h2>
+            <form action="#">
+                <div class="input-box">
+                    <span class="icon"><icon-icon name="mail"></icon-icon></span>
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="input-box">
+                    <span class="icon"><icon-icon name="lock-close"></icon-icon></span>
+                    <input type="password"  id="password" required>
+                    <label>Password</label>
+                </div>
+
+                <div class="ingat">
+                    <input type="checkbox" onchange="togglePasswordVisibility()">
+                    <label>Show password</label>
+                    <a href="#">Forget password?</a>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+
+                <div class="login-register">
+                    <a href="#" class="register-link">Register Account?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="index2.js"></script>
+    <script type="module" src="https://unpkg.com/iconicon@7.1.0/dist/iconicons/iconicons.esm.js"></script>
+    <script nomodule="https://unpkg.com/iconicon@7.1.0/dist/iconicons/iconicons.esm.js"></script>
+</body>
+</html>
