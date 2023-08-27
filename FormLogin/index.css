@@ -1,117 +1,117 @@
 body {
-    background-image: url(img/pexels.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    overflow: hidden;
+  background-image: url(img/Background-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 480px;
-    background-color: rgba(170, 159, 159, 0.3);
-    border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 480px;
+  background-color: rgba(170, 159, 159, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
 }
 
 .container h1 {
-    text-align:center;
-    padding-top: 20px;
-    color: #ffffff;
+  text-align: center;
+  padding-top: 20px;
+  color: #ffffff;
 }
 
 .container form {
-    padding: 0 40px;
+  padding: 0 40px;
 }
 
 form .form-control {
-    position: relative;
-    border-bottom: 2px solid #b9b5b5;
-    margin: 40px 0
+  position: relative;
+  border-bottom: 2px solid #b9b5b5;
+  margin: 40px 0;
 }
 
 .form-control.success {
-    border-bottom-color: #6fc0f2;
+  border-bottom-color: #6fc0f2;
 }
 
 .form-control.error {
-    border-bottom-color: #e74c3c;
+  border-bottom-color: #e74c3c;
 }
 
 .form-control input {
-    width: 100%;
-    height: 40px;
-    font-size: 16px;
-    border: none;
-    background: none;
-    outline: none;
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
 }
 
 small {
-    position: absolute;
-    left: 0;
-    top: 100%;
-    margin-top: 3px;
-    color: #f8f5f5;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 3px;
+  color: #f8f5f5;
 }
 
 .form-control span::before {
-    content: "";
-    position: absolute;
-    top: 40px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #f3f4f5;
-    transition: 0.3s;
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #f3f4f5;
+  transition: 0.3s;
 }
 
 .form-control input:focus ~ span::before {
-    width: 100%;
+  width: 100%;
 }
 
-input[type='submit'] {
-    margin-top: 20px;
-    width: 100%;
-    height: 50px;
-    border: 1px solid;
-    background-color: rgba(39, 33, 33, 0.3);
-    border-radius: 25px;
-    font-size: 18px;
-    color: #f8f6f6;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-    transition: 0.5s;
+input[type="submit"] {
+  margin-top: 20px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background-color: rgba(39, 33, 33, 0.3);
+  border-radius: 25px;
+  font-size: 18px;
+  color: #f8f6f6;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  transition: 0.5s;
 }
-input[type='submit']:hover {
-    background-color: #60c0f0;
+input[type="submit"]:hover {
+  background-color: #60c0f0;
 }
 
 .signup_link {
-    margin: 15px 0;
-    text-align: center;
-    font-size: 16px;
-    color: rgb(43, 39, 39);
+  margin: 15px 0;
+  text-align: center;
+  font-size: 16px;
+  color: rgb(43, 39, 39);
 }
 
 .signup_link a {
-    color: #eef2f5;
-    text-decoration: none;
+  color: #eef2f5;
+  text-decoration: none;
 }
 
 .signup_link a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-.form-control input>::placeholder {
-    color: #000;
+.form-control input > ::placeholder {
+  color: #000;
 }
 
 /* Edge */
 ::-webkit-input-placeholder {
-    color: rgb(207, 203, 203);
+  color: rgb(207, 203, 203);
 }

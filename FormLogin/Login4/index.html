@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Form - 4</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Tạo logo trên tên của tab trang web -->
+    <link rel="shortcut icon" href="../img/ava7.jpg" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c9f5871d83.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><i class="fa-solid fa-globe"></i>Khoaaa</a>
+
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Menu</a>
+        <a href="#">Reviwe</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home">
+      <div class="content">
+        <h2>Welcome!!!</h2>
+        <p>
+          My name is Khoa. I'm 26 year old when I was born. Forever love PMP
+        </p>
+        <a href="#">Get Started</a>
+      </div>
+
+      <div class="login">
+        <h2>Sign In</h2>
+        <form action="#">
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-envelope"></i>
+            </span>
+            <input
+              type="text"
+              class="input"
+              placeholder="Enter your email"
+              autocomplete="off"
+              required
+            />
+          </div>
+
+          <div class="input-box">
+            <span class="icon">
+              <i class="fa-solid fa-lock"></i>
+              <input
+                type="password"
+                class="input"
+                placeholder="Enter your password"
+                autocomplete="off"
+                required
+              />
+            </span>
+          </div>
+          <div class="remember-forgot">
+            <label
+              ><!-- <input type="checkbox" /> -->
+              <div class="checkmark">
+                <!-- <input checked="checked"type="checkbox"/> -->
+                <input type="checkbox" />
+                Remember me
+              </div>
+            </label>
+            <a href="#">Forgot password</a>
+          </div>
+          <div class="btn-login">
+            <!-- <button type="submit">Login</button> -->
+            <button class="button">Login</button>
+          </div>
+          <div class="register-link">
+            <p>Not a member?</p>
+            &nbsp;
+            <a href="#">Sign up now</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        // Khi trang tải xong, kiểm tra checkbox tự động
+        document.getElementById("myCheckbox").checked = true;
+      });
+    </script> -->
+  </body>
+</html>

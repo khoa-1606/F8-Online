@@ -9,14 +9,27 @@
     <script src="object2.js"></script>
 
     <style>
+      .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 10px double rgb(255, 145, 0);
+      }
       h1 {
         text-align: center;
         font-size: 50px;
-        color: rgb(0, 255, 64);
+        color: rgb(0, 255, 170);
+        text-decoration: underline;
+      }
+      h1:hover {
+        color: red;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
-    <h1>Object Constructor</h1>
+    <div class="content">
+      <h1>Object Constructor</h1>
+    </div>
   </body>
 </html>
