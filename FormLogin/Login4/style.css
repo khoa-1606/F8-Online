@@ -93,7 +93,7 @@
 }
 .register-link {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   color: #fff;
   margin-top: 10px;
 }

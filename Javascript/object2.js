@@ -1,24 +1,15 @@
-var emailKey = "email";
+//Object constructor => Xây dựng đối tượng
 
-var myInfo = {
-  name: "Khoa Vo",
-  age: 26,
-  address: "TV",
-  [emailKey]: "huynhkhoavo1606@gmail.com",
-  //[biến]: 'value'
-  getName: function () {
-    return this.name; //this -> myInfo
-  },
-  getAge: function () {
-    return this.age; //this -> myInfo
-  },
-};
+function User(fristName, lastName, avatar) {
+  this.fristName = fristName;
+  this.lastName = lastName;
+  this.avatar = avatar;
+}
+//create User
+var author = new User("Khoa", "Vo", "Avatar");
+var user = new User("Phuong", "Pham", "Avatar");
 
-console.log(myInfo.getName()); //output: Khoa Vo
-console.log(myInfo.getAge()); //output: 26
-
-console.log(myInfo.address); //output: TV
-console.log(myInfo["age"]); //output: 26
-
-var myKey = "address";
-console.log(myInfo[myKey]); //output: TV
+console.log(author);
+//output: User {fristName: 'Khoa', lastName: 'Vo', avatar: 'Avatar'}
+console.log(user);
+//output: User {fristName: 'Phuong', lastName: 'Pham', avatar: 'Avatar'}
