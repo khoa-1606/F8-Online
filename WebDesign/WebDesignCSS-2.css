@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  /* margin: 0;
+  padding: 0; */
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+    /* background-image: url(/WebDesign/img/Background-1.jpg);
+    background-repeat: no-repeat; */
+    /* background full screen */
+    /* background-attachment: fixed;
+    background-position: center;
+    background-size: cover; */
+
+    background-color: lightgray;
+    /* background: linear-gradient(skyblue,lightgrey);
+    background: linear-gradient(to left, skyblue,lightgrey);
+    background-repeat: no-repeat;
+    background full screen
+    background-attachment: fixed; */
+}
+h1 {
+    /* background: linear-gradient(skyblue,lightgrey); */
+    background: linear-gradient(to right, rgb(0, 183, 255),lightgrey);
+    background-repeat: no-repeat;
+    /* background full screen */
+    background-attachment: fixed;
+}
+.le {
+    background-color: aqua;
+    font-size: 16px;
+    font-weight: bold;
+}
+.chan {
+    background-color: lightpink;
+    font-size: 16px;
+    text-decoration: underline;
+}
+.para {
+    border-style: outset;
+    border-width: 4px;
+    border-color: blue;
+    border-radius: 8px;
+    padding: 10px;
+    /* border-top-color: red;
+    border-right-width: 10px; */
+
+
+    /* background: linear-gradient(skyblue,lightgrey); */
+    background: linear-gradient(to left, skyblue,lightgrey);
+    background-repeat: no-repeat;
+    /* background full screen */
+    background-attachment: fixed;
+}
+#b1 {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    background-color: red;
+}
+#b2 {
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    background-color: yellow;
+    margin: 10px;
+    padding: 20px;
+}
+
+/* #box1 {
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    background-color: lightgreen;
+    position: relative;
+} */
+/* #box2 {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+} */
+
+#box1 {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    margin-left: 800px;
+    background-color: lightgreen;
+    position: sticky;
+    top: 10px;
+}
+
+h2 {
+    font-size: 40px;
+    color: red;
+    /* text-shadow: 5px 5px 5px yellow; */
+    text-shadow: 5px 5px 5px yellow,-5px -5px 5px blue;
+    box-shadow: 10px 10px 5px green;
+}
+#box {
+    padding: 20px;
+    font-size: 30px;
+    border: solid 1px #000;
+    width: 300px;
+    height: 300px;
+    background-color: aqua;
+
+    /* transform: translateX(50px);
+    transform: translateY(40px); */
+    /* transform: translate(50px, 40px);
+    transform: rotateX(180deg);
+    transform: scaleX(2);
+    transform: scaleY(2); */
+    /* ngien */
+    /* transform: skewX(20deg);
+    transform: skewY(20deg); */
+    /* transform: skew(20deg, 20deg); */
+
+    /* transform: matrix(0, 0, 0, 0, 0, 0); */
+    /* matrix bao gồm:
+     scaleX()
+     scaleY()
+     skewX()
+     skewY()
+     translateX()
+     translateY()
+     */
+}
+
+/* Lớp giả */
+button {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+button:hover {
+    background-color: red;
+}
+button:active {
+    background-color: yellow;
+}
+ul {
+    font-size: 16px;
+}
+/* ul > li:nth-child(6) {
+    color: red;
+} */
+/*
+1. number
+2. odd: lẻ
+3. even: chẵn 
+4. [number]n+x
+ */
+ ul > li:nth-child(3n) {
+    color: red;
+}
+/* Responsive - Breakpoint: phạm vi giới hạn
+- 320px breakpoint Mobile
+- 768px breakpoint tablet
+- 1024px breakpoint PC, laptop,...*/
+@media all and (max-width: 768px) {
+    h3 {
+        color: red;
+    }
+}
+@media all and (max-width: 480px) {
+    h3 {
+        color: orange;
+    }
+}
+@media all and (max-width: 1024px) {
+    h3 {
+        color: green;
+    }
+}
