@@ -1,10 +1,10 @@
 // Đối tượng Date
 
-
 /*E.x:
 Tạo một object constructor Student gồm: firstName, lastName. 
 Sau đó, định nghĩa thêm phương thức là getFullName, phương thức này sẽ trả về tên đầy đủ của sinh viên.
 */
+
 // Làm bài tại đây
 function Student(firstName, lastName) {
     this.firstName = firstName;
